@@ -34,6 +34,10 @@ reservations after the first 5 will be sent to the waitlist.
 
 ### Screenshot of pages
 
+![Home page](/Assets/screenshot-1.png)
+![Reservation page](/Assets/screenshot-2.png)
+![Tables page](/Assets/screenshot-3.png)
+
 
 ### License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
