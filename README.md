@@ -17,8 +17,6 @@ reservations after the first 5 will be sent to the waitlist.
 4. Run the application in the command line 
 > node server.js
 
-### Screenshot of pages
-
 ### This repository contains: 
 
   - server.js - This file utilizes Express to create a server and initializes the routes to each page.
