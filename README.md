@@ -1,7 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## My Restaurant
-
-This application contains a restaurant reservation app and is hosted on the local server using Express.
+This repository contains a restaurant reservation app and is hosted on the local server using Express.
 The form data is posted to the /api route and the first 5 reservations will be send to the tables list. All of the
 reservations after the first 5 will be sent to the waitlist.
 
@@ -14,7 +13,7 @@ reservations after the first 5 will be sent to the waitlist.
 > SSH: `git@github.com:micheqn3/my-restaurant.git`
 3. Install the NPM packages
 > npm install
-4. Run the application in the command line 
+4. Start up the server in the command line 
 > node server.js
 5. Open the application in your browser as it is hosted locally
 > http://localhost:3000
