@@ -16,6 +16,8 @@ reservations after the first 5 will be sent to the waitlist.
 > npm install
 4. Run the application in the command line 
 > node server.js
+5. Open the application in your browser as it is hosted locally
+> http://localhost:3000
 
 ### This repository contains: 
 
