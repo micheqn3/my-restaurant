@@ -14,8 +14,8 @@ reservations after the first 5 will be sent to the waitlist.
 > SSH: `git@github.com:micheqn3/my-restaurant.git`
 3. Install the NPM packages
 > npm install
-4. Run the application in the command line using nodemon
-> npx nodemon
+4. Run the application in the command line 
+> node server.js
 
 ### Screenshot of pages
 
@@ -34,9 +34,13 @@ reservations after the first 5 will be sent to the waitlist.
 
 ### Screenshot of pages
 
-![Home page](/Assets/screenshot-1.png)
-![Reservation page](/Assets/screenshot-2.png)
-![Tables page](/Assets/screenshot-3.png)
+Home Page            |  Reservations   
+:-------------------------:|:-------------------------: 
+![Home page](/Assets/screenshot-1.png)  |  ![Reservations](/Assets/screenshot-2.png). 
+
+Current Tables
+:-------------------------:
+![Tables](/Assets/screenshot-3.png)
 
 
 ### License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
