@@ -1,8 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## My Restaurant
-This repository contains a restaurant reservation app and is hosted on the local server using Express.
-The form data is posted to the /api route and the first 5 reservations will be send to the tables list. All of the
-reservations after the first 5 will be sent to the waitlist.
+This repository contains a restaurant reservation app that receives form data and posts it to the server using Express.
+The form data is posted to the /api route and the first 5 reservations will be sent to the tables list, while all of the
+reservations after the first 5 will be sent to the waitlist. This application also includes links to view the current
+tables/waitlist data as JSON.
 
 ### Link to deployed application
 
