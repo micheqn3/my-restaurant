@@ -4,8 +4,11 @@ This repository contains a restaurant reservation app and is hosted on the local
 The form data is posted to the /api route and the first 5 reservations will be send to the tables list. All of the
 reservations after the first 5 will be sent to the waitlist.
 
+### Link to deployed application
 
-### Installation 
+https://my-restaurant-micheqn3.herokuapp.com/
+
+### Installing locally
 
 1. Make sure you have Node.js to run the application
 2. Clone this repo
