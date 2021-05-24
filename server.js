@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000
 app.use(express.urlencoded({ extended: true })); // Sets up data parsing
 app.use(express.json());
 
@@ -22,16 +22,22 @@ app.get('/api', (req, res) => { // Route to tables page
     res.json(reservations)
 })
 
-app.post('/api', (req, res) => {
+app.post('/api', (req, res) => { // Handles posting form data
     const data = req.body;
     console.log(data)
     reservations.push(data)
 
 })
 
-// api 
-// api/:tables
-// api/:waitlist
+app.get('/api/tables', (req, res) => { // Shows the 5 first 5 reservations
+    let first5 = reservations.slice(0,5)
+    res.json(first5)
+})
+
+app.get('/api/waitlist', (req, res) => { // Shows the wait list
+    let waitList = reservations.slice(5)
+    res.json(waitList);
+})
 
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}`)
