@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <style>
-        .jumbotron {
-            min-height: 500px;
-            display: flex;
-            justify-content: center;
-        }
+      .jumbotron {
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+      }
     </style>
 </head>
 <body>
@@ -48,58 +48,55 @@
 
     <div class="container">
         <h6>Control Panel</h6>
-        <a href="#" class="text-danger">Clear Table</a>
         <a href="/api/tables" class="text-danger ml-5">API Table Link</a>
         <a href="/api/waitlist" class="text-danger ml-5">API Wait List</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-      fetch(`/api`, { // Fetching the form data stored in /api
+      fetch('/api', { // Fetching the form data stored in /api
           method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
-        })
-        .then((response) => response.json())
-   
-        .then(function(data){
-          let tableSection = $('#reservations');
-          let waitlistSection = $('#waitlist');
-            for (let i = 0; i < data.length; i++) {
-              let id = data[i].id; // Assigning data to variables
-              let name = data[i].name;
-              let email = data[i].email;
-              let phone = data[i].phone;
+      })
+      .then((response) => response.json())
+      .then(function(data){
+        let tableSection = $('#reservations');
+        let waitlistSection = $('#waitlist');
+        for (let i = 0; i < data.length; i++) {
+          let id = data[i].id; // Assigning data to variables
+          let name = data[i].name;
+          let email = data[i].email;
+          let phone = data[i].phone;
 
-              if(i < 5) { // For the first 5 reservations
-              let table = $('<div>');
-              let h1 = $('<p>').text(id);
-              let h2 = $('<h4>').text(name);
-              let h3 = $('<p>').text(email);
-              let h4 = $('<p>').text(phone);
-              let hr = $('<hr>');
-              tableSection.append(h2);
-              tableSection.append(h1);
-              tableSection.append(h3);
-              tableSection.append(h4);
-              tableSection.append(hr);
-
-            } else { // After 5, the reservation is sent to the waitlist
-              let table = $('<div>');
-              let h1 = $('<p>').text(id);
-              let h2 = $('<h4>').text(name);
-              let h3 = $('<p>').text(email);
-              let h4 = $('<p>').text(phone);
-              let hr = $('<hr>');
-              waitlistSection.append(h2);
-              waitlistSection.append(h1);
-              waitlistSection.append(h3);
-              waitlistSection.append(h4);
-              waitlistSection.append(hr);
-            }
+          if(i < 5) { // For the first 5 reservations
+            let table = $('<div>');
+            let h1 = $('<p>').text(id);
+            let h2 = $('<h4>').text(name);
+            let h3 = $('<p>').text(email);
+            let h4 = $('<p>').text(phone);
+            let hr = $('<hr>');
+            tableSection.append(h2);
+            tableSection.append(h1);
+            tableSection.append(h3);
+            tableSection.append(h4);
+            tableSection.append(hr);
+          } else { // After 5, the reservation is sent to the waitlist
+            let table = $('<div>');
+            let h1 = $('<p>').text(id);
+            let h2 = $('<h4>').text(name);
+            let h3 = $('<p>').text(email);
+            let h4 = $('<p>').text(phone);
+            let hr = $('<hr>');
+            waitlistSection.append(h2);
+            waitlistSection.append(h1);
+            waitlistSection.append(h3);
+            waitlistSection.append(h4);
+            waitlistSection.append(hr);
           }
-        })
+        }
+      })
     </script>
 </body>
 </html>

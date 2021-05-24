@@ -26,7 +26,6 @@ app.post('/api', (req, res) => { // Handles posting form data
     const data = req.body;
     console.log(data)
     reservations.push(data)
-
 })
 
 app.get('/api/tables', (req, res) => { // Shows the 5 first 5 reservations
